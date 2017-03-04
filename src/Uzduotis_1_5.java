@@ -31,47 +31,4 @@ public class Uzduotis_1_5 {
 
     }
 }
-//}
-//        Skaiciavimas1_5 objektas = new Skaiciavimas1_5();
-//        objektas.ivedimas();
-//        objektas.sum();
-//        objektas.skirt();
-//    }
-//
-//
-//}
-//
-//class Skaiciavimas1_5 {
-//    public int a;
-//    public int b;
-//    public float a2;
-//    public float b2;
-//
-//    public void ivedimas() {
-//        System.out.println("skaicius a:");
-//        Scanner sc = new Scanner(System.in);
-//        a = sc.nextInt();
-//        a2 = sc.nextFloat();
-//        System.out.println("skaicius b:");
-//        b = sc.nextInt();
-//        b2 = sc.nextFloat();
-//        System.out.println("Jus ivedete " + a + "ir " + b);
-//    }
-//
-//    public void sum() {
-//        int sum = a + b;
-//        System.out.println("Skaiciu suma yra: " + sum);
-//    }
-//
-//    public float  {
-//        float sum = a2 + b2;
-//        System.out.println("Skaiciu suma yra: " + sum(float a2, float b2));
-//        return sum(a, b);
-//    }
-//
-//    public void skirt() {
-//        int skirt = a - b;
-//        System.out.println("Skaiciu skirtumas yra: " + skirt);
-//
-//    }
-//}
+
