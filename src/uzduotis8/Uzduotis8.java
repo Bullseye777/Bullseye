@@ -1,5 +1,6 @@
 package uzduotis8;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -7,18 +8,21 @@ import java.util.Scanner;
  */
 public class Uzduotis8 {
     public Uzduotis8() {
+        int sk = -1;
+        System.out.println("Įveskite skaičius kuriuos norite sudėti, pabaigti įveskite '0'");
         int sum = 0;
-        while (true) {
-            System.out.println("Įveskite skaičius kuriuos norite sudėti, pabaigti įveskite '0'");
-            Scanner sc = new Scanner(System.in);
-            int sk = sc.nextInt();
-
-            if (sk != 0) {
+        while (sk != 0) {
+            try {
+                Scanner sc = new Scanner(System.in);
+                sk = sc.nextInt();
                 sum = sum + sk;
 
-            } else {
-                System.out.println("Įvestų skaičių sumą lygi:" + sum);
+            } catch (InputMismatchException e) {
+                System.out.println("Įveskite skaičių:");
             }
         }
+            System.out.println("Įvestų skaičių sumą lygi:" + sum);
+
+        }
     }
-}
+
