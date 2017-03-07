@@ -16,6 +16,7 @@ import uzduotis5.Uzduotis5;
 import uzduotis6.Uzduotis6;
 import uzduotis7.Uzduotis7;
 import uzduotis8.Uzduotis8;
+import Masyvai.Uzduotis1_5;
 
 
 import java.util.Scanner;
@@ -28,7 +29,7 @@ public class Main {
 
         Uzduotis0 uzduotis0 = new Uzduotis0();
         System.out.println("------------------");
-        System.out.println("Iveskite skaiciu nuo 1 iki 8 užduočiai pasirinkti");
+        System.out.println("Iveskite skaiciu nuo 1 iki 9 užduočiai pasirinkti");
         while (true) {
             Scanner sc = new Scanner(System.in);
             int skaicius = sc.nextInt();
@@ -56,6 +57,9 @@ public class Main {
                     break;
                 case (8):
                     Uzduotis8 uzduotis8 = new Uzduotis8();
+                    break;
+                case (9):
+                    Uzduotis1_5 masyvai = new Uzduotis1_5();
                     break;
 
                 default:
