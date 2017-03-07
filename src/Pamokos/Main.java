@@ -60,6 +60,9 @@ public class Main {
                     break;
                 case (9):
                     Uzduotis1_5 masyvai = new Uzduotis1_5();
+                    System.out.println("Iveskite kiek skaičių reiks įvesti:");
+                    masyvai.nuskaitymas(sc.nextInt());
+                    masyvai.skaiciavimas();
                     break;
 
                 default:
