@@ -18,18 +18,18 @@ import uzduotis7.Uzduotis7;
 import uzduotis8.Uzduotis8;
 
 
-
 import java.util.Scanner;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        while (true) {
 
-            Uzduotis0 uzduotis0 = new Uzduotis0();
-            System.out.println("------------------");
-            System.out.println("Iveskite skaiciu nuo 1 iki 8 užduočiai pasirinkti");
+
+        Uzduotis0 uzduotis0 = new Uzduotis0();
+        System.out.println("------------------");
+        System.out.println("Iveskite skaiciu nuo 1 iki 8 užduočiai pasirinkti");
+        while (true) {
             Scanner sc = new Scanner(System.in);
             int skaicius = sc.nextInt();
             switch (skaicius) {
@@ -59,9 +59,9 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Ivedėte blogą skaičių (galimi nuo 1 iki 8)");
+                    System.out.println("Ivedėte blogą skaičių, tokios užduoties nėra");
             }
-            break;
+            // break;
         }
     }
 }
