@@ -7,6 +7,7 @@ package Pamokos;
  */
 
 
+import Masyvai2.Uzduotis1_6;
 import uzduotis0.Uzduotis0;
 import uzduotis1.Uzduotis1;
 import uzduotis2.Uzduotis2;
@@ -19,6 +20,7 @@ import uzduotis8.Uzduotis8;
 import Masyvai.Uzduotis1_5;
 
 
+
 import java.util.Scanner;
 
 
@@ -29,7 +31,7 @@ public class Main {
 
         Uzduotis0 uzduotis0 = new Uzduotis0();
         System.out.println("------------------");
-        System.out.println("Iveskite skaiciu nuo 1 iki 9 užduočiai pasirinkti");
+        System.out.println("Iveskite skaiciu nuo 1 iki 10 užduočiai pasirinkti");
         while (true) {
             Scanner sc = new Scanner(System.in);
             int skaicius = sc.nextInt();
@@ -63,6 +65,11 @@ public class Main {
                     System.out.println("Iveskite kiek skaičių reiks įvesti:");
                     masyvai.nuskaitymas(sc.nextInt());
                     masyvai.skaiciavimas();
+                    break;
+                case (10):
+                    Uzduotis1_6 masyvai2 = new Uzduotis1_6();
+                    masyvai2.nuskaitymas();
+                    masyvai2.spausdinimas();
                     break;
 
                 default:
