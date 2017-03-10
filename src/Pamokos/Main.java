@@ -38,11 +38,9 @@ public class Main {
             );
 
             Statement statemant = connection.createStatement();
-            statemant.execute("UPDATE `students` SET `name` = 'Aurimass' WHERE `students`.`id` = 1");
-            ResultSet resultSet = statemant.executeQuery("SELECT * FROM `Students`");
+            //statemant.execute("UPDATE `students` SET `name` = 'Aurimass' WHERE `students`.`id` = 1");
+            ResultSet resultSet = statemant.executeQuery("SELECT * FROM `Students`;");
 
-
-            //System.out.println(resultSet.next());
             while (resultSet.next()) {
                 System.out.print(resultSet.getInt("id"));
                 System.out.print("|");
@@ -53,6 +51,41 @@ public class Main {
 
 
             }
+            System.out.println("-----------------------------------");
+
+            statemant.executeUpdate("UPDATE `students` SET `name` = 'Aurimas' WHERE `students`.`id` = 1;");
+            resultSet = statemant.executeQuery("SELECT * FROM `Students`;");
+
+            while (resultSet.next()) {
+                System.out.print(resultSet.getInt("id"));
+                System.out.print("|");
+                System.out.print(resultSet.getString("name"));
+                System.out.print("|");
+                System.out.print(resultSet.getString("surname"));
+                System.out.println("");
+
+
+            }
+
+            System.out.println("-----------------------------------");
+
+
+            statemant.execute("DELETE FROM `student_marks` WHERE `mark`<5;");
+            resultSet = statemant.executeQuery("SELECT * FROM `student_marks`;");
+
+            while (resultSet.next()) {
+                System.out.print(resultSet.getInt("id"));
+                System.out.print("|");
+                System.out.print(resultSet.getString("student_id"));
+                System.out.print("|");
+                System.out.print(resultSet.getString("mark"));
+                System.out.println("");
+
+
+            }
+            System.out.println("-----------------------------------");
+
+
             connection.close();
 
 
