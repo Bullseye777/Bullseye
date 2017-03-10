@@ -20,13 +20,26 @@ import uzduotis8.Uzduotis8;
 import Masyvai.Uzduotis1_5;
 
 
-
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Scanner;
 
 
 public class Main {
 
     public static void main(String[] args) {
+
+        try {
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/kcs",
+                    "root",
+                    ""
+            );
+
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
 
         Uzduotis0 uzduotis0 = new Uzduotis0();
