@@ -36,8 +36,11 @@ public class Main {
                     "root",
                     ""
             );
+
             Statement statemant = connection.createStatement();
+            statemant.execute("UPDATE `students` SET `name` = 'Aurimass' WHERE `students`.`id` = 1");
             ResultSet resultSet = statemant.executeQuery("SELECT * FROM `Students`");
+
 
             //System.out.println(resultSet.next());
             while (resultSet.next()) {
