@@ -19,9 +19,10 @@ import uzduotis7.Uzduotis7;
 import uzduotis8.Uzduotis8;
 import Masyvai.Uzduotis1_5;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 
@@ -35,6 +36,21 @@ public class Main {
                     "root",
                     ""
             );
+            Statement statemant = connection.createStatement();
+            ResultSet resultSet = statemant.executeQuery("SELECT * FROM `Students`");
+
+            //System.out.println(resultSet.next());
+            while (resultSet.next()) {
+                System.out.print(resultSet.getInt("id"));
+                System.out.print("|");
+                System.out.print(resultSet.getString("name"));
+                System.out.print("|");
+                System.out.print(resultSet.getString("surname"));
+                System.out.println("");
+
+
+            }
+            connection.close();
 
 
         } catch (Exception e) {
@@ -85,11 +101,14 @@ public class Main {
                     masyvai2.spausdinimas();
                     break;
 
+
                 default:
                     System.out.println("Ivedėte blogą skaičių, tokios užduoties nėra");
             }
             // break;
         }
     }
+
+
 }
 
